@@ -5,4 +5,20 @@ class Book < ApplicationRecord
   def finished?
     finished_on.present?
   end
+
+  def has_author?
+    author.present?
+  end
+
+  def rating_descr
+    case rating
+    when 1,2
+      return "bad"
+    when 3
+      return "average"
+    else
+      return "good"
+    end
+  end
+
 end

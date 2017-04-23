@@ -1,9 +1,9 @@
-<li class="row rating-<%= book.rating %>">
+<li class="row">
   <div class="col-sm-3">
     <a href="#" target="_blank">
       <%= image_from_amazon(book.isbn10) %>
     </a>
-    <p class="text-center rating"><strong><%= book.rating %></strong>/5</p>
+    <p class="text-center rating rating-<%= book.rating_descr %>"><strong><%= book.rating %></strong>/5</p>
   </div>
 
   <div class="col-sm-9">

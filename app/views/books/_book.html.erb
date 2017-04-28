@@ -8,12 +8,16 @@
 
   <div class="col-sm-9">
     <h3><a href="#"><%= book.title %></a></h3>
-    <p class="text-muted"><em>Written by <%= book.author %></em></p>
-
+    <p class="text-muted"><em>Written by <%= book.author %></em>
     <div>
       <p>
         <%= book.description %>
       </p>
     </div>
+    <span>
+      <% book.genres.each do |genre| %>
+        <%= link_to genre.name, '#', class: 'label label-primary' %>
+      <% end %>
+    </span>
   </div>
 </li>

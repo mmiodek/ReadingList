@@ -76,6 +76,19 @@
 
       </ul>
     </div>
+    <div class="col-sm-4">
+      <h2>Genres</h2>
+      <ul class="list-unstyled">
+        <li><%= link_to 'All', books_path,
+              class: 'label label-primary' %></li>
+        <% @genres.each do |genre| %>
+          <li>
+            <%= link_to genre.name, books_path(genre: genre.name),
+              class: 'label label-primary' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
 
   </div>
 </div>

@@ -25,11 +25,11 @@ class Book < ApplicationRecord
 
   protected
     def set_keywords
-      book_genres = ''
-      self.genres.each do |g|
-        books_genres << g.name + ',' 
-      end
-      self.keywords = [title, author, books_genres].map(&:downcase).join(' ')
+      # book_genres = ''
+      # self.genres.each do |g|
+      #   books_genres << g.name + ',' 
+      # end
+      self.keywords = [title, author].map(&:downcase).join(' ')
     end
 
 end

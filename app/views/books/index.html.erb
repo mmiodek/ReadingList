@@ -32,11 +32,21 @@
       <%= form_for(Book.new, remote: true,
                    html: { class: 'horizontal-form' }) do |f| %>
       <legend>New Book</legend>
-
       <div class='col-sm-5'>
-
         <br>
-
+        <div class="form-group">
+          <label for="" class="col-sm-5 control-label">Genre</label>
+          
+          <div class="com-sm-10">
+          <% @genres.each do |genre| %>
+            <div class="checkbox">
+              <label>
+                <%= check_box_tag 'book[genre_ids][]', genre.id %> <%= genre.name %>
+              </label>
+            </div>
+          <% end %>
+          </div>
+        </div>
         <div class='form-group'>
           <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
         </div>

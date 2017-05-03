@@ -1,6 +1,0 @@
-- add header and footer partials
-- redo edit view and show view (change layout, add reviews and genres)
-- latest books should stay on top
-- all fields required, isbn = 10 digits
-- add more genres
-- add pagination

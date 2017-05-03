@@ -1,0 +1,4 @@
+$('.book-list').prepend('<%=j render @book %>');
+var form = $('#new_book');
+form.trigger('reset');
+$('.book-form').slideUp();

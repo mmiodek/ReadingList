@@ -41,10 +41,12 @@
           <% @genres.each do |genre| %>
             <div class="checkbox">
               <label>
-                <%= check_box_tag 'book[genre_ids][]', genre.id %> <%= genre.name %>
+                <%= check_box_tag 'book[genre_ids][]', genre.id, false, id: "genre_id_#{genre.id}" %> <%= genre.name %>
+<!--                 <%= f.check_box :genre_ids, {id: "genre_id_#{genre.id}"}, genre.id %><%= genre.name %> -->
               </label>
             </div>
           <% end %>
+<!--           <%= f.select :genre_ids, @genres.map {|g| [g.name, g.id]}, {}, {multiple:true} %> -->
           </div>
         </div>
         <div class='form-group'>
